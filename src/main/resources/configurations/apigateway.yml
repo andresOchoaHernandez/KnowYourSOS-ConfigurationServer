@@ -1,0 +1,18 @@
+server:
+  port: 8222
+eureka:
+  client:
+    register-with-eureka: false
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: sosnumbers
+          uri: http://localhost:8090
+          predicates:
+            - Path=/sosnumbers/**
+  application:
+    name: apigateway
