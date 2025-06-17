@@ -15,5 +15,12 @@ spring:
           uri: http://localhost:8090
           predicates:
             - Path=/sosnumbers/**
+        - id: updatedb
+          uri: http://localhost:8091
+          predicates:
+            - Path=/updatedb/**
   application:
     name: apigateway
+  logging:
+    level:
+      org.springframework.cloud.gateway: DEBUG
