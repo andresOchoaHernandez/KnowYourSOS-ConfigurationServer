@@ -9,6 +9,7 @@ spring:
       discovery:
         locator:
           enabled: true
+          lowerCaseServiceId: true
       routes:
         - id: sosnumbers
           uri: http://localhost:8090
