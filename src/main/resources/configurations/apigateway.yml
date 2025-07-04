@@ -12,11 +12,11 @@ spring:
           lowerCaseServiceId: true
       routes:
         - id: sosnumbers
-          uri: http://localhost:8090
+          uri: http://knowyoursos-sosnumbermicroservice:8090
           predicates:
             - Path=/sosnumbers/**
         - id: updatedb
-          uri: http://localhost:8091
+          uri: http://knowyoursos-updatedbmicroservice:8091
           predicates:
             - Path=/updatedb/**
   application:
